@@ -6,7 +6,6 @@ const myFancyAI = (
 ): ResultAsync<string, Error> => {
   return ResultAsync.fromPromise(
     new Promise(async (resolve, reject) => {
-      //const shouldReturnError = ;
       if (Math.random() > 0.5) {
         reject(new Error("error"));
         return;
@@ -33,7 +32,7 @@ const myExecFunctions = async (i: number): Promise<string> => {
 // - take 5000 calls from myExecFunctions (with as args indices ranging from 0 to 4999) and pipe them into myFancyAI
 // - the result promises must be executed 1000 at the same time (concurrently). So at any given time there should be roughly 1000 ongoing calls.
 // - there must be a retry-logic that tries at most 3 times before returning the error
-// - functions must be **executed** in the order they are given
+// - functions must be **executed** in the order they are created
 // - At the end, you must display:
 //    - total number of successfull calls
 //    - total number of failed calls
