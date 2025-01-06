@@ -1,0 +1,16 @@
+{
+  "name": "swe_interview_node",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/assert": "^1.5.11",
+    "assert": "^2.1.0",
+    "neverthrow": "^8.1.1"
+  }
+}
