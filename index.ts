@@ -30,9 +30,13 @@ const myExecFunctions = async (i: number): Promise<string> => {
 };
 
 // TODO:
-// - take 5000 calls from myExecFunctions and pipe them to myFancyAI
-// - the result promises must be executed 1000 at the same time (concurrently). So at any given time there should be roughly 1000 calls.
-// - there must be a retry-logic that tries at most 3 times before declaring the error
+// - take 5000 calls from myExecFunctions (with as args indices ranging from 0 to 4999) and pipe them into myFancyAI
+// - the result promises must be executed 1000 at the same time (concurrently). So at any given time there should be roughly 1000 ongoing calls.
+// - there must be a retry-logic that tries at most 3 times before returning the error
 // - functions must be **executed** in the order they are given
+// - At the end, you must display:
+//    - total number of successfull calls
+//    - total number of failed calls
+//    - percentage of success rate of all calls
 
 const concurrentTasks = 1000;
